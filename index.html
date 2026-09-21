@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Atelier de Delícias Luanda | Bolos, Doces & Eventos</title>
+
+  <meta
+    name="description"
+    content="Atelier de Delícias Luanda — bolos, doces, salgados, catering e soluções para momentos especiais."
+  >
+
+  <meta name="theme-color" content="#7b3f61">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    /* ==============================
+       RESET
+    ============================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: #fff9f4;
+      color: #2d2227;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    /* ==============================
+       CORES
+    ============================== */
+
+    :root {
+      --wine: #7b3f61;
+      --wine-dark: #54283f;
+      --cream: #fff9f4;
+      --cream-dark: #f8eee8;
+      --peach: #f4d7c8;
+      --gold: #c99a55;
+      --text: #2d2227;
+      --muted: #725f67;
+      --white: #ffffff;
+
+      --shadow:
+        0 18px 45px rgba(84, 40, 63, 0.13);
+
+      --radius: 24px;
+    }
+
+    /* ==============================
+       TOP BAR
+    ============================== */
+
+    .topbar {
+      background: var(--wine-dark);
+      color: #fff;
+      font-size: 0.86rem;
+      padding: 9px 0;
+    }
+
+    .topbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .topbar strong {
+      color: #fff;
+    }
+
+    /* ==============================
+       HEADER
+    ============================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(255, 249, 244, 0.95);
+
+      backdrop-filter: blur(10px);
+
+      border-bottom:
+        1px solid rgba(123, 63, 97, 0.10);
+    }
+
+    nav {
+      min-height: 74px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+
+      border-radius: 50%;
+
+      display: grid;
+      place-items: center;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--wine),
+          var(--gold)
+        );
+
+      color: #fff;
+
+      font-family: "Playfair Display", serif;
+      font-size: 1.15rem;
+
+      box-shadow:
+        0 8px 22px rgba(123, 63, 97, 0.25);
+    }
+
+    .brand strong {
+      display: block;
+
+      font-family: "Playfair Display", serif;
+
+      font-size: 1.1rem;
+
+      color: var(--wine-dark);
+    }
+
+    .brand small {
+      display: block;
+
+      color: var(--muted);
+
+      font-size: 0.70rem;
+    }
+
+    .navlinks {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .navlinks a {
+      transition: 0.2s ease;
+    }
+
+    .navlinks a:hover {
+      color: var(--wine);
+    }
+
+    .nav-cta {
+      background: var(--wine);
+      color: #fff;
+
+      padding: 11px 18px;
+
+      border-radius: 999px;
+
+      font-weight: 800;
+
+      transition: 0.2s ease;
+    }
+
+    .nav-cta:hover {
+      background: var(--wine-dark);
+      transform: translateY(-2px);
+    }
+
+    /* ==============================
+       HERO
+    ============================== */
+
+    .hero {
+      min-height: 670px;
+
+      position: relative;
+
+      display: grid;
+      align-items: center;
+
+      overflow: hidden;
+
+      color: #fff;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(52, 24, 38, 0.88) 0%,
+          rgba(52, 24, 38, 0.67) 46%,
+          rgba(52, 24, 38, 0.20) 100%
+        ),
+
+        url("https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1800&q=82")
+        center / cover no-repeat;
+    }
+
+    .hero::after {
+      content: "";
+
+      position: absolute;
+
+      left: -5%;
+      right: -5%;
+      bottom: -130px;
+
+      height: 220px;
+
+      background: var(--cream);
+
+      transform: rotate(-3deg);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+
+      max-width: 720px;
+
+      padding:
+        100px
+        0
+        150px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+
+      padding: 8px 14px;
+
+      border-radius: 999px;
+
+      background: rgba(255,255,255,0.12);
+
+      border:
+        1px solid rgba(255,255,255,0.25);
+
+      font-size: 0.78rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.08em;
+
+      margin-bottom: 20px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Playfair Display", serif;
+    }
+
+    h1 {
+      font-size: clamp(
+        2.7rem,
+        7vw,
+        5.3rem
+      );
+
+      line-height: 1.02;
+
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      max-width: 650px;
+
+      color: #fff4f0;
+
+      font-size: 1.08rem;
+    }
+
+    .actions {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 8px;
+
+      padding: 14px 21px;
+
+      border-radius: 999px;
+
+      font-weight: 800;
+
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: #fff;
+      color: var(--wine-dark);
+    }
+
+    .btn-outline {
+      color: #fff;
+
+      background: rgba(255,255,255,0.08);
+
+      border:
+        1px solid rgba(255,255,255,0.45);
+    }
+
+    /* ==============================
+       SEÇÕES
+    ============================== */
+
+    section {
+      padding: 85px 0;
+    }
+
+    .section-head {
+      max-width: 700px;
+
+      margin-bottom: 38px;
+    }
+
+    .section-head span {
+      color: var(--wine);
+
+      font-size: 0.76rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.13em;
+
+      text-transform: uppercase;
+    }
+
+    .section-head h2 {
+      color: var(--wine-dark);
+
+      font-size: clamp(
+        2rem,
+        4vw,
+        3.25rem
+      );
+
+      line-height: 1.1;
+
+      margin:
+        9px
+        0
+        13px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+    }
+
+    /* ==============================
+       CATEGORIAS
+    ============================== */
+
+    .cards {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 18px;
+    }
+
+    .card {
+      background: #fff;
+
+      border:
+        1px solid rgba(123,63,97,0.08);
+
+      border-radius: var(--radius);
+
+      overflow: hidden;
+
+      box-shadow: var(--shadow);
+
+      transition: 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-img {
+      height: 210px;
+    }
+
+    .card-body {
+      padding: 22px;
+    }
+
+    .card h3 {
+      color: var(--wine-dark);
+
+      font-size: 1.35rem;
+
+      margin-bottom: 7px;
+    }
+
+    .card p {
+      color: var(--muted);
+
+      font-size: 0.91rem;
+    }
+
+    .card-link {
+      display: inline-block;
+
+      margin-top: 15px;
+
+      color: var(--wine);
+
+      font-weight: 800;
+
+      font-size: 0.88rem;
+    }
+
+    /* ==============================
+       SOBRE
+    ============================== */
+
+    .about {
+      background: #fff;
+    }
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 55px;
+
+      align-items: center;
+    }
+
+    .about-img {
+      height: 500px;
+
+      overflow: hidden;
+
+      border-radius: 34px;
+
+      box-shadow: var(--shadow);
+    }
+
+    .about-copy p {
+      color: var(--muted);
+
+      margin:
+        15px
+        0;
+    }
+
+    .checks {
+      display: grid;
+
+      gap: 12px;
+
+      margin-top: 24px;
+    }
+
+    .check {
+      display: flex;
+
+      gap: 11px;
+
+      align-items: flex-start;
+    }
+
+    .check b {
+      color: var(--wine);
+
+      font-size: 1.1rem;
+    }
+
+    .check span {
+      color: var(--muted);
+    }
+
+    /* ==============================
+       EVENTOS
+    ============================== */
+
+    .features {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .feature {
+      padding: 30px;
+
+      background: #fff;
+
+      border-radius: var(--radius);
+
+      border:
+        1px solid rgba(123,63,97,0.08);
+
+      box-shadow: var(--shadow);
+
+      transition: 0.25s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-4px);
+    }
+
+    .feature-icon {
+      font-size: 2rem;
+
+      margin-bottom: 13px;
+    }
+
+    .feature h3 {
+      color: var(--wine-dark);
+
+      font-size: 1.35rem;
+
+      margin-bottom: 7px;
+    }
+
+    .feature p {
+      color: var(--muted);
+
+      font-size: 0.93rem;
+    }
+
+    /* ==============================
+       KITS
+    ============================== */
+
+    .kits {
+      background: var(--cream-dark);
+    }
+
+    .kit-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .kit {
+      background: #fff;
+
+      padding: 28px;
+
+      border-radius: var(--radius);
+
+      border:
+        1px solid rgba(123,63,97,0.08);
+
+      box-shadow: var(--shadow);
+    }
+
+    .kit-number {
+      width: 42px;
+      height: 42px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: var(--peach);
+
+      color: var(--wine-dark);
+
+      font-weight: 800;
+
+      margin-bottom: 17px;
+    }
+
+    .kit h3 {
+      color: var(--wine-dark);
+
+      font-size: 1.3rem;
+
+      margin-bottom: 8px;
+    }
+
+    .kit p {
+      color: var(--muted);
+
+      font-size: 0.92rem;
+
+      margin-bottom: 16px;
+    }
+
+    .kit a {
+      color: var(--wine);
+
+      font-weight: 800;
+
+      font-size: 0.88rem;
+    }
+
+    /* ==============================
+       CTA
+    ============================== */
+
+    .cta {
+      background:
+        linear-gradient(
+          135deg,
+          var(--wine-dark),
+          var(--wine)
+        );
+
+      color: #fff;
+
+      border-radius: 36px;
+
+      padding: 52px;
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+    .cta::before {
+      content: "";
+
+      position: absolute;
+
+      width: 280px;
+      height: 280px;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(255,255,255,0.12);
+
+      right: -70px;
+      top: -80px;
+    }
+
+    .cta-grid {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 30px;
+
+      position: relative;
+
+      z-index: 2;
+    }
+
+    .cta h2 {
+      font-size: clamp(
+        2rem,
+        4vw,
+        3.2rem
+      );
+
+      margin-bottom: 10px;
+    }
+
+    .cta p {
+      color: #f8eaf0;
+
+      max-width: 650px;
+    }
+
+    /* ==============================
+       FOOTER
+    ============================== */
+
+    footer {
+      background: #321d27;
+
+      color: #eadde2;
+
+      padding: 42px 0;
+    }
+
+    .footer-grid {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+    footer strong {
+      display: block;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 1.2rem;
+    }
+
+    footer p {
+      color: #bdaeb5;
+
+      font-size: 0.86rem;
+
+      margin-top: 5px;
+    }
+
+    .footer-actions {
+      display: flex;
+
+      gap: 10px;
+    }
+
+    .footer-actions a {
+      padding: 10px 15px;
+
+      border:
+        1px solid rgba(255,255,255,0.18);
+
+      border-radius: 999px;
+    }
+
+    /* ==============================
+       WHATSAPP FLUTUANTE
+    ============================== */
+
+    .whatsapp {
+      position: fixed;
+
+      right: 20px;
+      bottom: 20px;
+
+      z-index: 2000;
+
+      width: 62px;
+      height: 62px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: #25d366;
+
+      color: #fff;
+
+      font-size: 1.55rem;
+
+      border:
+        4px solid #fff;
+
+      box-shadow:
+        0 12px 30px rgba(0,0,0,0.20);
+
+      transition: 0.2s ease;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.08);
+    }
+
+    /* ==============================
+       RESPONSIVO
+    ============================== */
+
+    @media (max-width: 1000px) {
+
+      .cards {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .kit-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .navlinks {
+        display: none;
+      }
+
+    }
+
+    @media (max-width: 600px) {
+
+      .topbar .container {
+        justify-content: center;
+
+        text-align: center;
+      }
+
+      .topbar .container span:first-child {
+        display: none;
+      }
+
+      .hero {
+        min-height: 650px;
+      }
+
+      .hero-content {
+        padding:
+          75px
+          0
+          130px;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .card-img {
+        height: 230px;
+      }
+
+      .about-img {
+        height: 330px;
+      }
+
+      .kit-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta {
+        padding: 34px 24px;
+
+        border-radius: 26px;
+      }
+
+      .cta-grid {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
+      .footer-grid {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
+      .actions {
+        flex-direction: column;
+
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =====================================
+       BARRA SUPERIOR
+  ====================================== -->
+
+  <div class="topbar">
+
+    <div class="container">
+
+      <span>
+        Luanda • Projeto Nova Vida
+      </span>
+
+      <span>
+        Encomendas:
+        <strong>914 408 966</strong>
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================
+       HEADER
+  ====================================== -->
+
+  <header>
+
+    <nav class="container">
+
+      <a href="#" class="brand">
+
+        <span class="brand-mark">
+          AD
+        </span>
+
+        <span>
+
+          <strong>
+            Atelier de Delícias
+          </strong>
+
+          <small>
+            Luanda • Bolos & Eventos
+          </small>
+
+        </span>
+
+      </a>
+
+
+      <div class="navlinks">
+
+        <a href="#sobre">
+          Sobre
+        </a>
+
+        <a href="#delicias">
+          Delícias
+        </a>
+
+        <a href="#eventos">
+          Eventos
+        </a>
+
+        <a href="#kits">
+          Kits
+        </a>
+
+        <a href="#contacto">
+          Contacto
+        </a>
+
+      </div>
+
+
+      <a
+        class="nav-cta"
+        href="https://wa.me/244914408966?text=Olá%20Atelier%20de%20Delícias!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos."
+        target="_blank"
+        rel="noopener"
+      >
+        WhatsApp
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =====================================
+       HERO
+  ====================================== -->
+
+  <main>
+
+    <section class="hero">
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <span class="eyebrow">
+            SABOR • ELEGÂNCIA • MOMENTOS ESPECIAIS
+          </span>
+
+          <h1>
+            Delícias que tornam cada momento inesquecível.
+          </h1>
+
+          <p>
+            Bolos, doces, salgados, kits e soluções
+            de catering para aniversários, casamentos,
+            eventos corporativos e outros momentos
+            especiais em Luanda.
+          </p>
+
+
+          <div class="actions">
+
+            <a
+              class="btn btn-primary"
+              href="https://wa.me/244914408966?text=Olá!%20Quero%20fazer%20uma%20encomenda%20no%20Atelier%20de%20Delícias."
+              target="_blank"
+              rel="noopener"
+            >
+              🍰 Fazer encomenda
+            </a>
+
+
+            <a
+              class="btn btn-outline"
+              href="#delicias"
+            >
+              Ver especialidades
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         DELÍCIAS
+    ====================================== -->
+
+    <section id="delicias">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <span>
+            O que fazemos
+          </span>
+
+          <h2>
+            Escolha a sua próxima delícia
+          </h2>
+
+          <p>
+            Uma apresentação simples e profissional
+            para o cliente encontrar rapidamente o que
+            procura e entrar em contacto pelo WhatsApp.
+          </p>
+
+        </div>
+
+
+        <div class="cards">
+
+
+          <!-- BOLOS -->
+
+          <article class="card">
+
+            <div class="card-img">
+
+              <img
+                loading="lazy"
+                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=78"
+                alt="Bolo decorado"
+              >
+
+            </div>
+
+
+            <div class="card-body">
+
+              <h3>
+                Bolos
+              </h3>
+
+              <p>
+                Bolos decorados para aniversários,
+                celebrações e momentos especiais.
+              </p>
+
+              <a
+                class="card-link"
+                href="https://wa.me/244914408966?text=Olá!%20Gostaria%20de%20consultar%20as%20opções%20de%20bolos."
+                target="_blank"
+                rel="noopener"
+              >
+                Pedir informações →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- DOCES -->
+
+          <article class="card">
+
+            <div class="card-img">
+
+              <img
+                loading="lazy"
+                src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=78"
+                alt="Doces e sobremesas"
+              >
+
+            </div>
+
+
+            <div class="card-body">
+
+              <h3>
+                Doces
+              </h3>
+
+              <p>
+                Doces e sobremesas para festas,
+                mesas de doces e momentos especiais.
+              </p>
+
+              <a
+                class="card-link"
+                href="https://wa.me/244914408966?text=Olá!%20Gostaria%20de%20consultar%20as%20opções%20de%20doces."
+                target="_blank"
+                rel="noopener"
+              >
+                Pedir informações →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- SALGADOS -->
+
+          <article class="card">
+
+            <div class="card-img">
+
+              <img
+                loading="lazy"
+                src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=78"
+                alt="Salgados"
+              >
+
+            </div>
+
+
+            <div class="card-body">
+
+              <h3>
+                Salgados
+              </h3>
+
+              <p>
+                Opções para festas, reuniões,
+                eventos e momentos em família.
+              </p>
+
+              <a
+                class="card-link"
+                href="https://wa.me/244914408966?text=Olá!%20Gostaria%20de%20consultar%20as%20opções%20de%20salgados."
+                target="_blank"
+                rel="noopener"
+              >
+                Pedir informações →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- EVENTOS -->
+
+          <article class="card">
+
+            <div class="card-img">
+
+              <img
+                loading="lazy"
+                src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=78"
+                alt="Evento especial"
+              >
+
+            </div>
+
+
+            <div class="card-body">
+
+              <h3>
+                Eventos & Catering
+              </h3>
+
+              <p>
+                Soluções para casamentos,
+                aniversários e eventos corporativos.
+              </p>
+
+              <a
+                class="card-link"
+                href="https://wa.me/244914408966?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20catering%20para%20eventos."
+                target="_blank"
+                rel="noopener"
+              >
+                Solicitar orçamento →
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         SOBRE
+    ====================================== -->
+
+    <section
+      id="sobre"
+      class="about"
+    >
+
+      <div class="container about-grid">
+
+
+        <div class="about-img">
+
+          <img
+            loading="lazy"
+            src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=1200&q=82"
+            alt="Bolo artesanal decorado"
+          >
+
+        </div>
+
+
+        <div class="about-copy">
+
+          <div class="section-head">
+
+            <span>
+              Atelier de Delícias Luanda
+            </span>
+
+            <h2>
+              Feito para celebrar com sabor.
+            </h2>
+
+          </div>
+
+
+          <p>
+            O Atelier de Delícias trabalha com
+            bolos, doces, salgados e serviços para
+            diferentes tipos de eventos.
+          </p>
+
+
+          <p>
+            Através desta demonstração, o cliente
+            consegue conhecer as principais opções
+            e contactar diretamente o Atelier para
+            consultar disponibilidade, preços e
+            fazer a sua encomenda.
+          </p>
+
+
+          <div class="checks">
+
+            <div class="check">
+              <b>✓</b>
+              <span>
+                Encomendas personalizadas
+              </span>
+            </div>
+
+            <div class="check">
+              <b>✓</b>
+              <span>
+                Atendimento para eventos
+              </span>
+            </div>
+
+            <div class="check">
+              <b>✓</b>
+              <span>
+                Serviço de catering
+              </span>
+            </div>
+
+            <div class="check">
+              <b>✓</b>
+              <span>
+                Opções de entrega
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         EVENTOS
+    ====================================== -->
+
+    <section id="eventos">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <span>
+            Para momentos especiais
+          </span>
+
+          <h2>
+            Uma solução para cada ocasião
+          </h2>
+
+          <p>
+            O cliente pode escolher o tipo de evento
+            e entrar diretamente em contacto para
+            receber informações e orçamento.
+          </p>
+
+        </div>
+
+
+        <div class="features">
+
+
+          <article class="feature">
+
+            <div class="feature-icon">
+              🎂
+            </div>
+
+            <h3>
+              Aniversários
+            </h3>
+
+            <p>
+              Bolos, doces e salgados para
+              tornar a celebração ainda mais
+              especial.
+            </p>
+
+          </article>
+
+
+          <article class="feature">
+
+            <div class="feature-icon">
+              💍
+            </div>
+
+            <h3>
+              Casamentos
+            </h3>
+
+            <p>
+              Opções de catering e doces para
+              momentos que merecem uma
+              apresentação especial.
+            </p>
+
+          </article>
+
+
+          <article class="feature">
+
+            <div class="feature-icon">
+              🏢
+            </div>
+
+            <h3>
+              Eventos Corporativos
+            </h3>
+
+            <p>
+              Soluções para reuniões,
+              celebrações internas e outros
+              eventos empresariais.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         KITS
+    ====================================== -->
+
+    <section
+      id="kits"
+      class="kits"
+    >
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <span>
+            Kits & momentos
+          </span>
+
+          <h2>
+            Pequenos momentos também merecem sabor.
+          </h2>
+
+          <p>
+            Uma área que pode ser utilizada para
+            apresentar os diferentes kits disponíveis
+            pelo Atelier.
+          </p>
+
+        </div>
+
+
+        <div class="kit-grid">
+
+
+          <article class="kit">
+
+            <div class="kit-number">
+              01
+            </div>
+
+            <h3>
+              Kit Escolar
+            </h3>
+
+            <p>
+              Uma opção prática para momentos
+              especiais na escola.
+            </p>
+
+            <a
+              href="https://wa.me/244914408966?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Kit%20Escolar."
+              target="_blank"
+              rel="noopener"
+            >
+              Consultar kit →
+            </a>
+
+          </article>
+
+
+          <article class="kit">
+
+            <div class="kit-number">
+              02
+            </div>
+
+            <h3>
+              Kit Cinema
+            </h3>
+
+            <p>
+              Uma opção pensada para acompanhar
+              um momento descontraído.
+            </p>
+
+            <a
+              href="https://wa.me/244914408966?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Kit%20Cinema."
+              target="_blank"
+              rel="noopener"
+            >
+              Consultar kit →
+            </a>
+
+          </article>
+
+
+          <article class="kit">
+
+            <div class="kit-number">
+              03
+            </div>
+
+            <h3>
+              Kit Picnic
+            </h3>
+
+            <p>
+              Uma solução para encontros,
+              passeios e momentos ao ar livre.
+            </p>
+
+            <a
+              href="https://wa.me/244914408966?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Kit%20Picnic."
+              target="_blank"
+              rel="noopener"
+            >
+              Consultar kit →
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         CTA / CONTACTO
+    ====================================== -->
+
+    <section id="contacto">
+
+      <div class="container">
+
+        <div class="cta">
+
+          <div class="cta-grid">
+
+            <div>
+
+              <h2>
+                Vamos preparar algo especial?
+              </h2>
+
+              <p>
+                Consulte o preçário, veja as opções
+                disponíveis ou solicite um orçamento
+                para o seu evento.
+              </p>
+
+            </div>
+
+
+            <a
+              class="btn btn-primary"
+              href="https://wa.me/244914408966?text=Olá%20Atelier%20de%20Delícias!%20Gostaria%20de%20receber%20o%20preçário%20e%20saber%20mais%20sobre%20as%20opções%20disponíveis."
+              target="_blank"
+              rel="noopener"
+            >
+              Falar no WhatsApp →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================
+       FOOTER
+  ====================================== -->
+
+  <footer>
+
+    <div class="container footer-grid">
+
+      <div>
+
+        <strong>
+          Atelier de Delícias Luanda
+        </strong>
+
+        <p>
+          Projeto Nova Vida • Luanda • Angola
+        </p>
+
+        <p>
+          WhatsApp: 914 408 966
+        </p>
+
+      </div>
+
+
+      <div class="footer-actions">
+
+        <a
+          href="https://wa.me/244914408966"
+          target="_blank"
+          rel="noopener"
+        >
+          WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================
+       WHATSAPP FLUTUANTE
+  ====================================== -->
+
+  <a
+    class="whatsapp"
+    href="https://wa.me/244914408966?text=Olá!%20Gostaria%20de%20fazer%20uma%20encomenda."
+    target="_blank"
+    rel="noopener"
+    aria-label="Falar com o Atelier de Delícias pelo WhatsApp"
+  >
+    ☎
+  </a>
+
+</body>
+</html>
